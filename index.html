@@ -77,13 +77,20 @@
   </div>
 
   <script>
-    function check() {
-      const password = document.getElementById('pw').value;
+    // Add as many codes and URLs as you want here
+    const codes = {
+      "GOODWORK": "https://sites.google.com/view/end-of-year-game/part-1/copy-of-untitled-page",
+      "WELLTHATTOOKAWHILE": "https://sites.google.com/view/end-of-year-game/part-2/copy-of-room-2",
+      "code3": "https://your-third-page-url.com"
+    };
 
-      if (password === "GOODWORK") {
-        window.open("https://sites.google.com/view/end-of-year-game/part-1/copy-of-untitled-page", "_blank");
+    function check() {
+      const entered = document.getElementById('pw').value;
+
+      if (codes[entered]) {
+        window.open(codes[entered], "_blank");
       } else {
-        document.getElementById('err').textContent = "Incorrect code. Try again.";
+        document.getElementById('err').textContent = "Incorrect code. Lock in.";
       }
     }
   </script>
